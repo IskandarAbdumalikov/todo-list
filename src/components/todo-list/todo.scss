@@ -1,0 +1,118 @@
+body {
+  background-image: url("https://cdn.pixabay.com/photo/2018/09/18/16/45/forest-3686632_640.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-family: Arial, sans-serif;
+}
+
+.todo__main {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 50px;
+  padding: 50px 0px;
+}
+
+.todo__form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 50px;
+
+  input,
+  select {
+    outline: none;
+    border: 1px solid #ddd;
+    height: 40px;
+    width: 100%;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+
+    &:focus {
+      border-color: #007bff;
+      box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    }
+  }
+
+  select option {
+    color: #333;
+    background-color: #fff;
+  }
+
+  button {
+    width: 100%;
+    border: 1px solid green;
+    height: 40px;
+    border-radius: 10px;
+    background: green;
+    font-size: 20px;
+    color: white;
+    transition: all 0.4s ease;
+  }
+}
+
+.important {
+  background: green;
+}
+
+.moderately {
+  background: yellow;
+}
+
+.unnecessary {
+  background: red;
+}
+
+.todo__manager {
+  display: flex;
+  flex-direction: column;
+  padding: 80px 0px;
+  text-align: center;
+  gap: 50px;
+  color: white;
+  table,
+  tr,
+  th,
+  td {
+    border: 1px solid white;
+    border-collapse: collapse;
+    color: white;
+  }
+
+  th,
+  td {
+    padding: 10px 0px;
+  }
+
+  .edit__btn,
+  .delete__btn {
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 1px solid transparent;
+    transition: all 0.4s ease;
+    color: white;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.85;
+    }
+  }
+
+  .edit__btn {
+    background: green;
+  }
+
+  .delete__btn {
+    background: red;
+
+    &:hover {
+      background: darkred;
+    }
+  }
+}
+
+button:hover {
+  opacity: 0.6;
+}
